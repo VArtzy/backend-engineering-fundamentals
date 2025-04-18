@@ -1,0 +1,27 @@
+updated job:1744991559771 to 0
+updated job:1744991559771 to 10
+updated job:1744991559771 to 20
+updated job:1744991559771 to 30
+updated job:1744991559771 to 40
+40
+updated job:1744991559771 to 50
+updated job:1744991559771 to 60
+updated job:1744991559771 to 70
+updated job:1744991559771 to 80
+updated job:1744991559771 to 90
+updated job:1744991559771 to 100
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────
+╰─> curl -X POST http://localhost:8080/submit
+
+
+job:1744991559771
+
+╭─ bash   backend-fundamentals   main ≢  ?1  羽111ms                      100   18, 22:52 
+╰─> curl http://localhost:8080/checkstatus?jobId=job:1744991559771
+
+
+JobStatus: Complete 100%
+
+╭─ bash   backend-fundamentals   main ≢  ?1  羽18s 86ms                   100   18, 22:53 
+╰─> 
