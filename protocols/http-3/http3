@@ -1,0 +1,17 @@
+HTTP3 uses QUIC which is different protocol than HTTP2 (using TCP)
+
+QUIC is using UDP (HTTP3 => QUIC => UDP)
+
+This effectively terminate TCP's limitations (example: TCP head of Line Block) when a segment lost, the next segments will not send and acknowledge to the client
+
+Merge connection setup + tls in one handshake (lower latency, roundtrip)
+
+Having connection migration
+
+HTTP2 and HTTP3 may be similiar (stream based, one connection) but it is not built upon (just similiar)
+
+Having slightly better header compression algorithms
+
+Since use UDP, IP Segment will not handled in QUIC, so it has to send big quicgram (datagram)
+
+HTTP3 eats more CPU than HTTP2 (more processes on going)

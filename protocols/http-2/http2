@@ -1,0 +1,11 @@
+HTTP 1.1 only do one request for one connection, this make it slower
+
+HTTP 2 based on stream, it can multiplexing request on connection (save resource)
+
+HTTP 2 also make compression, secured by default (using tls) use binary format which HTTP 1.1 doesn't
+
+Definitely faster than HTTP1.1 in terms of performance
+
+TCP head of Line Block => when a segment lost, the next segments will not send and acknowledge to the client
+
+HTTP2 eats more CPU than HTTP1.1 (more processes on going)
