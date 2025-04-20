@@ -3,6 +3,7 @@ HTTP3 uses QUIC which is different protocol than HTTP2 (using TCP)
 QUIC is using UDP (HTTP3 => QUIC => UDP)
 
 This effectively terminate TCP's limitations (example: TCP head of Line Block) when a segment lost, the next segments will not send and acknowledge to the client
+t
 
 Merge connection setup + tls in one handshake (lower latency, roundtrip)
 
