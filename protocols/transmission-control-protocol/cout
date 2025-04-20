@@ -1,0 +1,21 @@
+
+╰─> cd protocols/transmission-control-protocol/
+╭─ bash   transmission-control-protocol   main ≡  ?1  羽91ms             100   20, 15:51 
+╰─> gcc main.c 
+╭─ bash   transmission-control-protocol   main ≡  ?1  羽600ms            100   20, 15:51 
+╰─> ls
+a.out  index.mjs  main.c  out
+╭─ bash   transmission-control-protocol   main ≡  ?1  羽92ms             100   20, 15:51 
+╰─> ./a.out 
+Server socket created successfully.
+[+]Bind to port number: 8801.
+[+]Listening...
+[+]Closing the connection.
+╭─ bash   transmission-control-protocol   main ≡  ?1  羽19s 971ms        100   20, 15:52 
+╰─> 
+────────────────────────────────────────────────────────────────────────────────────────────────────────
+╭─ bash   backend-fundamentals   main ≡  ?1  羽0ms                       100   20, 15:52 
+╰─> nc 127.0.0.1 8801
+Hello client![ble: EOF]                                                                                 
+╭─ bash   backend-fundamentals   main ≡  ?1  羽134ms                     100   20, 15:52 
+╰─> 

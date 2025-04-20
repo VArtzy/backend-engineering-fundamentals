@@ -1,0 +1,28 @@
+
+╰─> gcc main.c 
+╭─ bash   user-datagram-protocol   main ≡  ?1  羽843ms                   100   20, 14:25 
+╰─> ./a.out 
+got data from hello from netcat to c udp server
+w[ble: EOF]                                                                                             
+╭─ bash   user-datagram-protocol   main ≡  ?1  羽21s 282ms               100   20, 14:26 
+╰─> 
+
+
+
+
+
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────
+╭─ bash   backend-fundamentals   main ≡  ?1  羽0ms                       100   20, 14:25 
+╰─> 
+╭─ bash   backend-fundamentals   main ≡  ?1  羽0ms                       100   20, 14:25 
+╰─> 
+╭─ bash   backend-fundamentals   main ≡  ?1  羽0ms                       100   20, 14:25 
+╰─> nc -u 127.0.0.1 5501
+hello from netcat to c udp server
+shiut^H^H^Ht
+read(net): Connection refused
+[ble: exit 1]
+╭─ bash   backend-fundamentals   main ≡  ?1  羽28s 655ms                 100   20, 14:26 
+╰─> 

@@ -1,0 +1,16 @@
+OSI Model -- network architecture and application built on these standart
+
+Layer 7 - Application
+Layer 6 - Presentation
+Layer 5 - Session
+Layer 4 - Transport
+Layer 3 - Network
+Layer 2 - Data Link
+Layer 1 - Physical
+
+TCP/IP
+
+Layer 4 - Application
+Layer 3 - Transport
+Layer 2 - Network
+Layer 1 - Data Link

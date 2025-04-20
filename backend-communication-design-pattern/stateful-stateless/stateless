@@ -1,0 +1,12 @@
+stateless is when system doesnt bring "state"
+
+note that "data" (i.e. datagram in UDP) ARE NOT state
+
+being stateless system meaning that if the instance or package dies, when it restart or restransmit, it will not working. There is "state" lost. And the work have to do it over to get it work.
+
+Example:
+UDP -- no state
+HTTP -- no state, the data state is stored usually in database. Not in the HTTP itself. So when application is restarted, the state is still there because already stored in database
+REST
+
+**note: you can build stateless protocol upon stateful protocol (HTTP -- TCP)

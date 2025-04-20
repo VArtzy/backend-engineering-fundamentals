@@ -1,0 +1,28 @@
+
+Received data: Hi bro
+
+Received data: I love  yo
+
+Received data: 
+
+TCP handshake successful with 127.0.0.1:39230
+Received data: Hi bro 1
+
+Received data: HI br
+
+Received data: hi bro too
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────
+I love  yo^H^H^H
+
+hi bro too
+^C[ble: EOF]                                                                                            
+╭─ bash   backend-fundamentals   main ≡  ?1  羽54s 155ms                 100   20, 15:41 
+╰─> 
+────────────────────────────────────────────────────────────────────────────────────────────────────────
+╭─ bash   backend-fundamentals   main ≡  ?1  羽0ms                       100   20, 15:40 
+╰─> nc 127.0.0.1 8800
+Hello client!Hi bro 1
+HI br^H^H^H
+

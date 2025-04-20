@@ -1,0 +1,11 @@
+stateful is when system bring "state"
+
+being stateful system meaning that if the instance or package dies, when it restart or restransmit, it will still working. There is no "state" lost.
+
+Example:
+TCP -- it has state to deliver between two instance to establish connection
+WebSocket
+QUIC
+Product service -- it has state to saved on the database
+
+**note: you can build stateful protocol upon stateless protocol (ex: QUIC -- UDP)

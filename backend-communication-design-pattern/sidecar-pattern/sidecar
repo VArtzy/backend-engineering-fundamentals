@@ -1,0 +1,7 @@
+Backend pattern that used on sidecar proxy like service mesh
+
+The benefit is that you can change method, versions and protocol without change the two communicated component (compatibility) as long as the client AND server having the sidecar proxy in their network. The sidecars who actually communicating.
+
+But it's adding more complexity, and therefore some latency
+
+Example: linkerd

@@ -1,0 +1,26 @@
++---------------------------------------------------------------+
+|                         X.509 Certificate                     |
++---------------------------------------------------------------+
+|                        Certificate Header                     |
+|  - Version                                                    |
+|  - Serial Number                                              |
+|  - Signature Algorithm Identifier                             |
+|  - Issuer Name (Who issued the certificate)                   |
+|  - Validity Period (Start and End Dates)                      |
+|  - Subject Name (Owner of the certificate)                    |
++---------------------------------------------------------------+
+|                         Public Key                            |
+|  - Algorithm Identifier                                       |
+|  - Public Key Data                                            |
++---------------------------------------------------------------+
+|                Optional Extensions (X.509 v3)                 |
+|  - Subject Alternative Name                                   |
+|  - Key Usage (e.g., Digital Signature, Key Encipherment)      |
+|  - Basic Constraints (e.g., CA=true)                          |
+|  - Authority Key Identifier                                   |
+|  - Subject Key Identifier                                     |
++---------------------------------------------------------------+
+|                       Digital Signature                       |
+|  - Signature Algorithm Identifier                             |
+|  - Signature Value (Signed by Issuer's Private Key)           |
++---------------------------------------------------------------+

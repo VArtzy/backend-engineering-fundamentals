@@ -1,0 +1,7 @@
+TLS how we safely communicate between clint and server
+
+HTTPS use TLS to make HTTP 'Secured'
+
+TLS 1.2 => RSA (two roundtrip)
+
+TLS 1.3 => Diffie Hellman (one roundtrip/ZeroRoundTrip)
