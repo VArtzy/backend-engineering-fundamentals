@@ -1,0 +1,6 @@
+HTTPS over TCP with TLS 1.2
+HTTPS over TCP with TLS 1.3
+HTTPS over QUIC
+HTTPS over TCP Fast Open (TFO)
+HTTPS over TCP with TLS 1.3 0RTT
+HTTPS over QUIC 0RTT
