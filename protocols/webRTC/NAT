@@ -1,0 +1,13 @@
+Network Address Translation
+
+menghubungkan antara IP local (private IP) dari router dengan IP yang ada di internet
+
+example:
+local: 0.0.10.1 // only on local (given IP from router)
+port: 1234
+
+router: 3.3.3.3 // expose to the internet (gateway)
+port: 3333
+
+remote: 4.4.4.4 // expose remote server
+port: 22

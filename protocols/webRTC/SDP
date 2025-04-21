@@ -1,0 +1,3 @@
+message format that either as offer or answer to store metadata to connect two node in webRTC
+
+each nodes have to set their localDescription and remoteDescription exchangely
