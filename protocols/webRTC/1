@@ -1,0 +1,26 @@
+const lc = new RTCPeerConnection()
+undefined
+const dc = lc.createDataChannel("channel")
+undefined
+dc.onmessage = e => console.log("Just got a message " + e.data)
+e => console.log("Just got a message " + e.data)
+dc.onopen = _ => console.log("Connection opened!")
+_ => console.log("Connection opened!")
+lc.onicecandidate = _ => console.log("New ICE candidate! reprinting SDP:" + JSON.stringify(lc.localDescription))
+_ => console.log("New ICE candidate! reprinting SDP:" + JSON.stringify(lc.localDescription))
+lc.createOffer().then(o => lc.setLocalDescription(o)).then(_ => console.log("Set successfully"))
+Promise {<pending>}
+VM234:1 Set successfully
+2VM229:1 New ICE candidate! reprinting SDP:{"type":"offer","sdp":"v=0\r\no=- 431791675346157032 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE 0\r\na=extmap-allow-mixed\r\na=msid-semantic: WMS\r\nm=application 9 UDP/DTLS/SCTP webrtc-datachannel\r\nc=IN IP4 0.0.0.0\r\na=candidate:3974582496 1 udp 2113937151 ff4664a2-54a0-48f2-99cd-c1cc2d66a17e.local 33870 typ host generation 0 network-cost 999\r\na=ice-ufrag:TWYE\r\na=ice-pwd:YaxurPST7VwPjqQ4X0oLvhuU\r\na=ice-options:trickle\r\na=fingerprint:sha-256 77:BA:3C:13:34:6E:00:3E:FA:A1:1C:A1:8B:C2:1A:EC:05:9C:0A:BB:5C:7C:F0:46:16:46:C0:3C:CC:34:41:07\r\na=setup:actpass\r\na=mid:0\r\na=sctp-port:5000\r\na=max-message-size:262144\r\n"}
+const answer = {"type":"answer","sdp":"v=0\r\no=- 1397096287496417813 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=group:BUNDLE 0\r\na=extmap-allow-mixed\r\na=msid-semantic: WMS\r\nm=application 9 UDP/DTLS/SCTP webrtc-datachannel\r\nc=IN IP4 0.0.0.0\r\na=candidate:851672706 1 udp 2113937151 0b6f9971-0622-4d4e-92c7-a9429ed4de13.local 51946 typ host generation 0 network-cost 999\r\na=ice-ufrag:CIBt\r\na=ice-pwd:SipdQZUykyUt8tFo6RU49LOv\r\na=ice-options:trickle\r\na=fingerprint:sha-256 61:EB:C8:17:B4:1F:AB:DB:B5:C5:AF:0D:95:12:9A:EA:68:5A:10:F6:06:38:47:27:6E:BF:A4:A2:1D:95:45:05\r\na=setup:active\r\na=mid:0\r\na=sctp-port:5000\r\na=max-message-size:262144\r\n"}
+undefined
+lc.remoteDescription(answer)
+VM419:1 Uncaught TypeError: lc.remoteDescription is not a function
+    at <anonymous>:1:4
+(anonymous) @ VM419:1
+lc.setRemoteDescription(answer)
+Promise {<pending>}
+VM221:1 Connection opened!
+dc.send("To peer B")
+undefined
+VM217:1 Just got a message To peer A
