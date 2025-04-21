@@ -1,0 +1,1 @@
+Proxy hide client from server, client still know the final destination (although final destination can be reverse proxy. That mean it's used proxy and reverse proxy together -- looks like sidecar pattern)

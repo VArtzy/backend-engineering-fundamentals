@@ -1,0 +1,1 @@
+WebSocket proxy have tunnel at "connection" level. So there is no message will sended into two server, because they'll lose context. Actually, you can turn off this by creating it from scratch, but it is rarely low usecase.

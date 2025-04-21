@@ -1,0 +1,1 @@
+The client doesnt know the final destination, the real backend server (final destination) stay behind reverse proxy (example: load balancer, API gateway)
