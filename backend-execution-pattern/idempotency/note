@@ -1,0 +1,11 @@
+Idempotentcy is the idea of repeatable request but without change the state in the backend
+
+GET is actually idempotent by default (browser and proxy), derived from read operation. No matter how many request send, the response will not change any state
+
+POST are not idempotent default, but we can make it idempotent on application layer
+
+ways:
+- Request ID
+- Upsert (Update the same data instead of insert it again)
+- Idempotent token/key
+- Stateless system

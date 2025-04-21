@@ -1,0 +1,1 @@
+The backend app and client are relies on Operating System (the kernel) to communicate, thats why adds up a receive, send, connection and accept buffer. OS also help with socket and file descriptor creation. But there is a more complex flow before the client and server can communicate.

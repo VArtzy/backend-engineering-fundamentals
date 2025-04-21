@@ -1,0 +1,5 @@
+3 ways handshake to establish connection with state
+
+SYN (client info)
+SYN/ACK (server info)
+ACK (hey server, i get your info)

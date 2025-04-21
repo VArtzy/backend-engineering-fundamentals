@@ -1,0 +1,12 @@
+43. Single Listener, Acceptor and Reader Thread Execution Pattern (NodeJS)
+
+44. Single Listener, Acceptor and Multiple Readers Thread Execution Pattern (Memcached)
+
+45. Single Listener, Acceptor, Reader with Message Load Balancing Execution Pattern (Ramcloud)
+
+46. Multiple Accepter Threads on a Single Socket Execution Pattern (old Nginx)
+
+47. Multiple Listeners, Acceptors and Readers with Socket Sharding Execution Pattern
+7min (Nginx, Haporxy, Envoy)
+
+Remember! Socket sharding baby! use one port to run two processes

@@ -1,0 +1,15 @@
+low level algorithm that in OS or transport layer that use MSS (Minimum Segment Size) to pool buffer at certain threshold before sending it. Send the remaining data after getting ACK.
+
+if we have 5000b buffer
+say the MSS is 1500b
+first 1500 sended
+second 1500 sended
+third 1500 sended
+the 500 will not send until it getting ack from sended segment before
+
+this lead to delay
+
+pro: save bandwidth
+cons: delay and more latency (especially when it's stacked, it's add up)
+
+so in most cases better to turn in off (like curl turn off using  --TCP-NODELAY)

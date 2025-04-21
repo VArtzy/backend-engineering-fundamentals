@@ -1,0 +1,5 @@
+Threads are lightweight processes (sort of subprocesses)
+
+Threads and processes are compete for CPU time
+
+example: browser tabs

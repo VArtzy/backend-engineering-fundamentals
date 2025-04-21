@@ -1,0 +1,9 @@
+Connection is effectively socket, have a file descriptor. A way to send buffer, stream, segment, packet and datagram through communication (socket is actually just a integer under the hood (in C))
+
+Sockets are uniquely identified by a combination of an IP address and a port number. 
+
+it is 'listening' socket from server perspective
+
+it is 'connection' socket from client perspective
+
+Once connected, data can be exchanged between the two sockets using functions like send and receive. 
