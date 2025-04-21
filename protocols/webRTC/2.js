@@ -2,7 +2,7 @@ let offer /* offer JSON object */
 
 const rc = new RTCPeerConnection()
 
-rc.onicecandidate = _ => console.log("New ICE candidate! reprinting SDP:" + JSON.stringify(lc.localDescription))
+rc.onicecandidate = _ => console.log("New ICE candidate! reprinting SDP:" + JSON.stringify(rc.localDescription))
 
 rc.ondatachannel = e => {
     rc.dc = e.channel
