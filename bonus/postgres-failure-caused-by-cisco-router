@@ -1,0 +1,48 @@
+Postgres failure caused by a Cisco router (TCP issue)
+Was chasing a failure in a Postgres client where the connection is lost after 90 minutes. Both client and db are on Windows.
+
+I ended up on Cisco official doc to fully understand what was going on.
+
+This one is interesting.
+
+
+
+Routers track connections they see in a local state table for routing decisions and filtering out invalid packets.
+
+This state is cleared when either party closes the connection, to make room for other connections, especially that the memory is limited in routers.
+
+
+
+However, routers can also “drop” the knowledge of the state when a connection goes idle for too long (the rationale is both server and client have crashed). So that we don’t leave stale connections for too long.
+
+
+
+A connection is considered idle when no data has been transmitted by either client or server for a long time.
+
+This idle timeout defaults to 1 hour for Cisco routers (configurable via tcp idle-time).
+
+
+The postgres client app connected to the postgres server and executed a bunch of queries and then started processing the data locally which took over 90 minutes to complete.
+
+Meanwhile no packets were exchanged between the client or the server for. the 90 minutes.
+
+The gateway router between the DB and the client had a default idle timeout of 60 minutes. That router dropped the knowledge of the connection after an hour of idle time.
+
+Both server and client did not know that the connection was dropped.
+
+When the client finished processing (90 minutes later), it tried to query the database using the same connection, the router received the packet but dropped it because it couldn’t find in its local state table.
+
+Client fails with a connection failure.
+
+Now Postgres luckily has an option to configure keep alive messages, those are packets that are sent frequently by either client or server to, well, keep the connection alive.
+
+Because we were using Windows and the value of tcp_keepalives_idle is 0, which means use the Windows default, the Windows default is 2 hours. ie, Postgres would only send a keep alive message every 2 hours.
+
+
+Changing the tcp_keepalives_idle to a value less than an hour (to match the Cisco’s 1 hour tcp idle time) solves this problem.
+
+This way the Postgres server will send a keep alive TCP message before the 60 minutes elapsed on the idle time on the Cisco router.
+
+
+
+I love this stuff.

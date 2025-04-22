@@ -1,0 +1,7 @@
+Every socket created have pair of syn queue and accept queue.
+
+That mean not essentially kernel make one pair syn accept queue on entire system.
+
+But remember, every socket can be used for numerous processes.
+
+And actually syn, accept is the classic queue (FIFO). Whereas read and send may be enchanted with pooling stream feature so there is not bunch of element in the queue (save bandwidth)

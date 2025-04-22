@@ -1,0 +1,5 @@
+Yes, you can actually running out of TCP port.
+
+This typically happen with many request, that each request make a connection instead of pooling of reusing one.
+
+If there is 20000 connection, roughly 20000 TCP port used to connect (for example, as client web server connect to message queue). And when TCP port running out of the threshold (typically 30000-65559 in TCP) => something bad will happen (slowing down, instance dies, and chaos engineering)
