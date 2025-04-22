@@ -1,0 +1,11 @@
+ChatGPT uses server sent event to get stream message model response. This will consume in the frontend with ReadableStream to get typing style response on web UI elements.
+
+every message from user and model get a message id
+
+and every conversation have conversation id
+
+there may be improvement to use ulid instead of uuid in the message id (since message is time-series)
+
+They have very simple, neat but effective API design, for example, the conversation/feedback
+
+Interesting thing is, whenever you add a follow up chat, every request message have message id and it's parent message it (the message before it). That's how chatGPT manage context by API design.
