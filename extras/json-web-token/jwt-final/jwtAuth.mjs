@@ -22,11 +22,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
 const pool = new pg.Pool({
-    "host": "husseinmac.local",
-    "port": 5432,
-    "user":"postgres",
-    "password" : "postgres",
-    "database" : "postgres",
+    user: process.env.DB_USER || "postgres",
+    password: process.env.DB_PASSWORD || "postgres",
+    host: process.env.DB_HOST || "vartz",
+    port: process.env.DB_PORT || 5433,
+    database: process.env.DB_NAME || "postgres",
     "max": 20,
     "connectionTimeoutMillis" : 0,
     "idleTimeoutMillis": 0
