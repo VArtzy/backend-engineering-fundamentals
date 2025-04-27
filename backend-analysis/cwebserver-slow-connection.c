@@ -30,7 +30,7 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    if (listen(server_fd, 10) < 0) { // listen socket
+    if (listen(server_fd, 1) < 0) { // listen socket
         perror("Listen failed");
         exit(EXIT_FAILURE);
     }

@@ -46,10 +46,13 @@ int main() {
 
         char *http_response = "HTTP/1.1 200 OK\n"
             "Content-Type: text/plain\n"
-            "Content-Length: 13\n\n"
+            "Content-Length: 14\n\n"
             "Hello world!\n";
 
         write(client_fd, http_response, strlen(http_response)); // write to send queue
+        
+        sleep(6); // slow download (last byte)
+        write(client_fd, "!", 1);
 
         close(client_fd); // close connection
     }

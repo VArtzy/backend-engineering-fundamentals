@@ -44,6 +44,8 @@ int main() {
         read(client_fd, buffer, APP_MAX_BUFFER); // get from read queue
         printf("%s\n", buffer);
 
+        sleep(6); // simulating backend proccess
+
         char *http_response = "HTTP/1.1 200 OK\n"
             "Content-Type: text/plain\n"
             "Content-Length: 13\n\n"
