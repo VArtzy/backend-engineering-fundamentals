@@ -1,0 +1,4 @@
+CREATE TABLE urls(
+    slug VARCHAR(20) PRIMARY KEY,
+    url TEXT NOT NULL
+)

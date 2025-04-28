@@ -1,0 +1,10 @@
+### Create shorten link
+POST http://localhost:8080/url
+Content-Type: application/json
+
+{
+    "url": "https://skkksurakarta.com"
+}
+
+### Get link
+GET http://localhost:8080/91EBZ

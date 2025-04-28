@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <h4>input URL:</h4>
+   <input type="text" id="url"> 
+    <button id="submit">shorten</button>
+
+   <script>
+       const slug = window.location.pathname.split('/')[0];
+       if (slug) {
+           fetch('http://localhost:8080/' + slug)
+       }
+
+       const urlEl = document.querySelector('#url')
+       const submitEl = document.querySelector('#submit')
+
+       submitEl.addEventListener('click', async () => {
+           const res = await fetch('http://localhost:8080/url',
+               {
+                   method: 'POST',
+                   headers: {
+                       'Content-Type': 'application/json'
+                   },
+                   body: JSON.stringify({url: urlEl.value})
+               })
+           const data = await res.text()
+           alert(data)
+       })
+   </script>
+</body>
+</html>

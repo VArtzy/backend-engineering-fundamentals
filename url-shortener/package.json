@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "pg": "^8.15.6",
+    "ulid": "^3.0.0"
+  }
+}
