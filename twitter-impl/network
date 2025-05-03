@@ -1,0 +1,53 @@
+[
+    {
+        "Name": "twitter",
+        "Id": "a25dbd82d6ec12f50fd66b21a1cca90242d00dd592951499668d829b5eecdb36",
+        "Created": "2025-05-03T20:39:19.429482245+07:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.19.0.0/16",
+                    "Gateway": "172.19.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "4cee2836294b392373dc8c4ca9ba5a05952d59e7140b7f1e8ff17cd3218884a0": {
+                "Name": "twitter-replica-2",
+                "EndpointID": "deadf47e4da7d34fb8a800646440ca8c606cec0f7db4662130af349339972dd2",
+                "MacAddress": "82:e6:c6:e8:60:f3",
+                "IPv4Address": "172.19.0.4/16",
+                "IPv6Address": ""
+            },
+            "8b2b0aa760a07714e8abdbe6c980c44f32e5c3735aca6a044a2aba4fd477f3c3": {
+                "Name": "twitter-replica-1",
+                "EndpointID": "e0c64ca9ac391fd2fe374222046630ec35504f38c018b72c7a709170cc5cee80",
+                "MacAddress": "52:dc:b6:2e:50:f0",
+                "IPv4Address": "172.19.0.3/16",
+                "IPv6Address": ""
+            },
+            "d95da7c889cf5a1b67b0641543141e2ecd4985f10fabdec0d1d74dbee749abf6": {
+                "Name": "select-count-star-db-1",
+                "EndpointID": "7ac0e2784f8c601fc1cbeca6ed4add4819cd6844e4cd4cc1b60e4cf9e908558c",
+                "MacAddress": "52:a7:73:cf:50:39",
+                "IPv4Address": "172.19.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {}
+    }
+]

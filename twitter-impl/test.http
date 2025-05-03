@@ -1,0 +1,129 @@
+### Create User 1
+POST http://localhost:8080/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Farrel",
+    "password": "rahasia11"
+}
+
+
+### Create User 2
+POST http://localhost:8080/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Eka",
+    "password": "rahasia2"
+}
+
+### Create User 3
+POST http://localhost:8080/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Budi",
+    "password": "rahasia3"
+}
+
+### Login User 1 -- 5492393779ddda74ea89741d01a31f18bffd617dbfb93980fd72f5053681d05db1cdd0597f9df5968fda8ed7c33fd5d976e1d2673d1c6b7ecb074400b9f0874e
+POST http://localhost:8080/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Farrel",
+    "password": "rahasia11"
+}
+
+### Login User 2 -- af2fd4fc56c11b3206506cbd09a8294ef9e724b38513b49ce6c17c214c2a424255ca535db41985f205a5eae6ce52fbac8c37b8b3062caf2971683001fa3c7f50
+POST http://localhost:8080/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Eka",
+    "password": "rahasia2"
+}
+
+### Login User 3 -- 7ad262a358b6ceb62b4c77de8c8912080abb47ee65ae742911f3b0afee6bd84fe5233808bac1b88f7301a0820ea7ef3da3c46438121e58edc36e6dd30ab37591
+POST http://localhost:8080/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Budi",
+    "password": "rahasia3"
+}
+
+### Tweet service
+POST http://localhost:8081
+Content-Type: application/json
+Accept: application/json
+X-API-TOKEN: 5492393779ddda74ea89741d01a31f18bffd617dbfb93980fd72f5053681d05db1cdd0597f9df5968fda8ed7c33fd5d976e1d2673d1c6b7ecb074400b9f0874e
+
+{
+    "text": "Such a game changing! Let's use React v69!"
+}
+
+### Tweet service
+POST http://localhost:8081
+Content-Type: application/json
+Accept: application/json
+X-API-TOKEN: af2fd4fc56c11b3206506cbd09a8294ef9e724b38513b49ce6c17c214c2a424255ca535db41985f205a5eae6ce52fbac8c37b8b3062caf2971683001fa3c7f50
+
+{
+    "text": "I have been using NeoVim for 10 years, you guys should too!"
+}
+
+### Tweet service
+POST http://localhost:8081
+Content-Type: application/json
+Accept: application/json
+X-API-TOKEN: 7ad262a358b6ceb62b4c77de8c8912080abb47ee65ae742911f3b0afee6bd84fe5233808bac1b88f7301a0820ea7ef3da3c46438121e58edc36e6dd30ab37591
+
+{
+    "text": "JavaScript is child's toy, let's get rusty!"
+}
+
+### Following
+POST http://localhost:8080/users/follow/8
+Content-Type: application/json
+Accept: application/json
+X-API-TOKEN: 5492393779ddda74ea89741d01a31f18bffd617dbfb93980fd72f5053681d05db1cdd0597f9df5968fda8ed7c33fd5d976e1d2673d1c6b7ecb074400b9f0874e
+
+### Following
+POST http://localhost:8080/users/follow/7
+Content-Type: application/json
+Accept: application/json
+X-API-TOKEN: 7ad262a358b6ceb62b4c77de8c8912080abb47ee65ae742911f3b0afee6bd84fe5233808bac1b88f7301a0820ea7ef3da3c46438121e58edc36e6dd30ab37591
+
+### Following
+POST http://localhost:8080/users/follow/9
+Content-Type: application/json
+Accept: application/json
+X-API-TOKEN: 7ad262a358b6ceb62b4c77de8c8912080abb47ee65ae742911f3b0afee6bd84fe5233808bac1b88f7301a0820ea7ef3da3c46438121e58edc36e6dd30ab37591
+
+### Following
+POST http://localhost:8080/users/follow/9
+Content-Type: application/json
+Accept: application/json
+X-API-TOKEN: af2fd4fc56c11b3206506cbd09a8294ef9e724b38513b49ce6c17c214c2a424255ca535db41985f205a5eae6ce52fbac8c37b8b3062caf2971683001fa3c7f50
+
+### Timeline
+GET http://localhost:8080/timeline
+Accept: application/json
+X-API-TOKEN: 5492393779ddda74ea89741d01a31f18bffd617dbfb93980fd72f5053681d05db1cdd0597f9df5968fda8ed7c33fd5d976e1d2673d1c6b7ecb074400b9f0874e
+
+### Timeline
+GET http://localhost:8080/timeline
+Accept: application/json
+X-API-TOKEN: af2fd4fc56c11b3206506cbd09a8294ef9e724b38513b49ce6c17c214c2a424255ca535db41985f205a5eae6ce52fbac8c37b8b3062caf2971683001fa3c7f50
+
+### Timeline
+GET http://localhost:8080/timeline
+Accept: application/json
+X-API-TOKEN: 7ad262a358b6ceb62b4c77de8c8912080abb47ee65ae742911f3b0afee6bd84fe5233808bac1b88f7301a0820ea7ef3da3c46438121e58edc36e6dd30ab37591
