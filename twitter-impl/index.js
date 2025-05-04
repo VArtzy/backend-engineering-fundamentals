@@ -101,7 +101,7 @@ app.get('/timeline', async (req, res) => {
     const did = req.userId
 
     try {
-        const row = await getReplica().query('SELECT t.* FROM tweets t JOIN followers f ON t.uid = f.tid WHERE f.did = $1 ORDER BY t.created_at DESC LIMIT 10', [did])
+        const row = await getReplica().query('SELECT t.uid,text,created_at FROM tweets t JOIN followers f ON t.uid = f.tid WHERE f.did = $1 ORDER BY t.created_at DESC LIMIT 10', [did])
         res.send({ data: row.rows })
     } catch (e) {
         return handleError(e, res)
