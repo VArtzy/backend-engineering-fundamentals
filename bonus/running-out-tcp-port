@@ -1,4 +1,4 @@
-Yes, you can actually running out of TCP port.
+Yes, you can running out of TCP port.
 
 This typically happen with many request, that each request make a connection instead of pooling of reusing one.
 
