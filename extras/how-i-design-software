@@ -1,4 +1,4 @@
-How I design software
+# How I design software
 
 Designing software is challenging and I don’t think there is a right or wrong way of doing it. I tried several software design methods in my career and they all lacked something and never left me confident about the system I built.
 
@@ -8,7 +8,8 @@ I tried a diagram-first approach where I draw the system. Most of the diagrams I
 
 I’m not saying diagrams are not useful, I just find them not powerful enough by themselves without companion documents. For example, when Elon shared the Twitter architecture diagram, I could see the high level components but it barely describes any deep technical substance about Twitter or what even those components are.
 
-Twitter architecture diagram shared by Elon
+![Twitter architecture diagram shared by Elon](https://i.ytimg.com/vi/o5n85GRKuzk/maxresdefault.jpg)
+
 Of course I also tried the design-by-powerpoint where I present a bunch of slides with bullet points that shows the system. Some questions remain difficult to convey in slides you end up missing something.
 
 After experimenting with many approaches I discovered that writing down the design while time-consuming has been most effective for me. Of course this isn’t something new, I think Seth Godin puts it nicely, the real way to design software is to spec it out all in writings.
@@ -17,12 +18,12 @@ I wanted to share the process with you in this article and also talk about its l
 
 This is how I approach software design.
 
-Writing
+## Writing
 If I want to write effectively whether medium articles, design docs or poetry, I find it best to have no distractions. I block 2–3 hours of uninterrupted time slots. No meetings, emails or any notification. I use a note app that is clutter free. I like to use write-monkey for Windows & Focus for Mac or recently just VIM. I go full screen dark mode, this way its only me and what I type.
 
 In the next sections I produce a collection of design documents for each type of stake-holder (people interested in the project). Some of these documents are high level, some of them are deeply technical, the audience can be difference.
 
-The Workflow
+## The Workflow
 Maybe the most important piece of design documents, I can’t count how many times a stake-holder called me out just because I have a feature in the software that I don’t have a use case for, I just felt its cool to add and I added it. While this is might be nice in hobby projects, building commerical sofware must be approached pragmatically.
 
 Having a workflow and use cases really help minimize scope and focus the work. Almost all pieces of the software link back eventually to a customer requirement based on a specific workflow or need.
@@ -33,7 +34,7 @@ I compile the questions raised from the workflow step and meet with the stakehol
 
 There isn’t a particular structure to the workflow document, its just a document. The goal is to clearly identify how the software will be used, feel free to be creative here. Include UI elements, talk in high level, describe so anyone reading this document knows what and who your software is for.
 
-Design Overview
+## Design Overview
 Next step is I open a new page and start writing down the design overview. The design overview explains how users interact with the software and what really happens. It is a technical representation of the workflow, in this step I can freely use technical terms.
 
 The design overview includes write-ups of different components of the software, the UII, UX, frontend, backend, protocols, databases etc. It also includes how the components interact with each other, referencing the workflow document when applicable. I.e. To solve this use case in workflow document we may to use HTTP/2 because we anticipant high number of requests from clients. This document has no diagrams yet.
@@ -44,26 +45,26 @@ The design overview also helps me articulate things that I have never thought ab
 
 The design overview document is sent and reviewed with the technical stake-holders for comments. It is almost like an RFC.
 
-Component Design
+## Component Design
 While writing the documents, components will start to form. These components will get their own document (if necessary) and I can go in details.
 
 I open a new page for each component and write in details what that component is, what does it interface with, what does it compute, what does it output etc. Reading this component its as if your reading the actual source code, every possible nuance I can think of I write down. Any limitations, any security consideration. I am allowed to go full technical here.
 
 I found in some project that this document doesn’t make sense as I can describe the component entirely in the design overview, but often time with time I find myself writing the component document anyway as I discover more about this component. Some components may end up being so big they end up as their own projects.
 
-Design Overview Diagram
+## Design Overview Diagram
 Final step after writing all the pieces is to draw the design overview diagram. It is a diagram of how all those components communicate with each other. I don’t use a special software here, just blocks and squares and arrows with text. simple. Google slides work perfectly.
 
 There would probably be multiple diagrams for each component based on the complexity of the system. Plus I would schedule reviews with team members every now and then.
 
-Limitations of this approach
+## Limitations of this approach
 One limitation of this approach is the time it takes to produce the documents and keep them up to date. I gotta admit sometimes I would forget to keep the documents up to date as fix bugs or introduce features. Ownership becomes also critical here as you leave project, rarely that the documents will update themselves, the next software designer might prefer another approach.
 
 Another limitation is its hard to present these in a meeting when the participants haven’t read the document and not familiar with the project. So I find power point helps here, creating few slides from the workflow and design overview solves this, but then keeping all these documents and slides up to date becomes also another challenge.
 
 Nothing is free. I don’t know, what do you guys do when designing software? Would love to see it.
 
-Summary
+## Summary
 In this article I talked about my approach to designing software by writing several documents. While it is a time-consuming task, I find that going back to these documents always have the answers.
 
 I don’t claim that this approach is perfect (I talked about its limitations) but I find relief when I go back to the document and I see everything is spilled out.
